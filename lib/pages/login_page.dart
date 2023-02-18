@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:acmilan_app/components/my_button.dart';
+// import 'package:acmilan_app/components/my_button.dart';
 import 'package:acmilan_app/components/my_textfield.dart';
+import 'package:acmilan_app/pages/home_page.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
@@ -77,9 +78,36 @@ class LoginPage extends StatelessWidget {
                 const SizedBox(height: 25),
 
                 //Log In Button
-                MyButton(
-                  onTap: logInUser,
-                  textButton: 'LOG IN',
+                // MyButton(
+                //   onTap: logInUser,
+                //   textButton: 'LOG IN',
+                // ),
+
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return const HomePage();
+                    }));
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.all(25),
+                    margin: const EdgeInsets.symmetric(horizontal: 25),
+                    decoration: BoxDecoration(
+                      color: Colors.red[900],
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: const Center(
+                      child: Text(
+                        'LOG IN',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
 
                 const SizedBox(height: 25),
