@@ -15,16 +15,17 @@ class _MobileScaffoldState extends State<MobileScaffold> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: myAppBar,
+      drawer: const MyDrawer(),
       backgroundColor: myDefaultBackground,
-      drawer: myDrawer,
       body: Column(
-        children: [
-          // tes box
+        children: <Widget>[
           AspectRatio(
             aspectRatio: 1,
             child: SizedBox(
               width: double.infinity,
               child: GridView.builder(
+                scrollDirection: Axis.vertical,
+                shrinkWrap: true,
                 itemCount: 4,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2),
@@ -34,22 +35,6 @@ class _MobileScaffoldState extends State<MobileScaffold> {
               ),
             ),
           ),
-
-          // // box on the top
-          // AspectRatio(
-          //   aspectRatio: 2,
-          //   child: SizedBox(
-          //     width: double.infinity,
-          //     child: GridView.builder(
-          //       itemCount: 4,
-          //       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          //           crossAxisCount: 2),
-          //       itemBuilder: (context, index) {
-          //         return const MyBox();
-          //       },
-          //     ),
-          //   ),
-          // ),
 
           // tiles below it
           Expanded(
