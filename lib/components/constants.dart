@@ -31,28 +31,40 @@ class MyDrawer extends StatelessWidget {
           )),
           ListTile(
             leading: const Icon(Icons.home),
-            title: const Text('D A S H B O A R D'),
+            title: const Text(
+              'D A S H B O A R D',
+              style: TextStyle(fontSize: 20),
+            ),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           ListTile(
             leading: const Icon(Icons.people_alt),
-            title: const Text('S Q U A D'),
+            title: const Text(
+              'S Q U A D',
+              style: TextStyle(fontSize: 20),
+            ),
             onTap: () {},
           ),
           ListTile(
             leading: const Icon(Icons.settings),
-            title: const Text('S E T T I N G S'),
+            title: const Text(
+              'S E T T I N G S',
+              style: TextStyle(fontSize: 20),
+            ),
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return Settings();
+                return const Settings();
               }));
             },
           ),
           ListTile(
             leading: const Icon(Icons.logout),
-            title: const Text('L O G O U T'),
+            title: const Text(
+              'L O G O U T',
+              style: TextStyle(fontSize: 20),
+            ),
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
                 return LoginPage();

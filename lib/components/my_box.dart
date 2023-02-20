@@ -7,10 +7,7 @@ class MyBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Container(
-        color: Colors.blue,
-        child: Image.asset('images/KitHome.png'),
-      ),
+      child: Image.asset('images/KitHome.png'),
     );
   }
 }
