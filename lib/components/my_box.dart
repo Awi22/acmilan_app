@@ -9,6 +9,7 @@ class MyBox extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         color: Colors.blue,
+        child: Image.asset('images/KitHome.png'),
       ),
     );
   }
