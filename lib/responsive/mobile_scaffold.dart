@@ -19,23 +19,36 @@ class _MobileScaffoldState extends State<MobileScaffold> {
       backgroundColor: myDefaultBackground,
       body: Column(
         children: <Widget>[
-          AspectRatio(
-            aspectRatio: 1,
-            child: SizedBox(
-              width: double.infinity,
-              child: GridView.builder(
-                scrollDirection: Axis.vertical,
-                shrinkWrap: true,
-                itemCount: 4,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2),
-                itemBuilder: (context, index) {
-                  return const MyBox();
-                },
-              ),
+          const SizedBox(height: 10),
+          const Text(
+            "S H O P",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+            ),
+          ),
+          SizedBox(
+            width: double.infinity,
+            child: GridView.builder(
+              scrollDirection: Axis.vertical,
+              shrinkWrap: true,
+              itemCount: 3,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3),
+              itemBuilder: (context, index) {
+                return const MyBox();
+              },
             ),
           ),
 
+          const SizedBox(height: 10),
+          const Text(
+            "S C H E D U L E",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+            ),
+          ),
           // tiles below it
           Expanded(
             child: ListView.builder(
