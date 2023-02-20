@@ -23,14 +23,23 @@ class MyDrawer extends StatelessWidget {
       backgroundColor: Colors.grey[300],
       child: Column(
         children: [
-          DrawerHeader(child: Icon(Icons.sports_soccer)),
+          DrawerHeader(
+              child: Image.asset(
+            'images/logo.png',
+            height: 70,
+            width: 70,
+          )),
           ListTile(
-            leading: Icon(Icons.home),
-            title: Text('D A S H B O A R D'),
+            leading: const Icon(Icons.home),
+            title: const Text('D A S H B O A R D'),
+            onTap: () {
+              Navigator.pop(context);
+            },
           ),
           ListTile(
-            leading: Icon(Icons.chat),
-            title: Text('M E S S A G E'),
+            leading: const Icon(Icons.people_alt),
+            title: const Text('S Q U A D'),
+            onTap: () {},
           ),
           ListTile(
             leading: const Icon(Icons.settings),
