@@ -16,10 +16,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: AnimatedSplashScreen(
-        duration: 2000,
-        splash: Image.asset(
-          'images/AC_Milan.png',
-        ),
+        duration: 3000,
+        splash: Image.asset('images/AC_Milan.png'),
+        splashIconSize: 200,
         nextScreen: LoginPage(),
         splashTransition: SplashTransition.fadeTransition,
         backgroundColor: myDefaultBackground!,
