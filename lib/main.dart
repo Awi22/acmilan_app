@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:acmilan_app/components/constants.dart';
 import 'package:acmilan_app/pages/login_page.dart';
 
 void main() {
@@ -13,7 +15,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: AnimatedSplashScreen(
+        duration: 2000,
+        splash: Image.asset('images/logo.png'),
+        nextScreen: LoginPage(),
+        splashTransition: SplashTransition.fadeTransition,
+        backgroundColor: myDefaultBackground!,
+      ),
     );
   }
 }
