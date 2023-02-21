@@ -1,5 +1,4 @@
 import 'package:acmilan_app/components/constants.dart';
-import 'package:acmilan_app/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 class Settings extends StatefulWidget {
